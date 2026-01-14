@@ -49,7 +49,9 @@ export function ProductList({ products, categories, onDelete }: ProductListProps
                         {product.category?.name || getCategoryName(product.categoryId || "")}
                       </Badge>
                     </TableCell>
-                    <TableCell className="text-right font-mono">${product.price.toFixed(2)}</TableCell>
+                    <TableCell className="text-right font-mono">
+                      ${(Number(product.price) || 0).toFixed(2)}
+                    </TableCell>
                     <TableCell>
                       <Button
                         variant="ghost"
