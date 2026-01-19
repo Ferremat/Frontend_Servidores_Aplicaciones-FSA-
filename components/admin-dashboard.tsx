@@ -254,7 +254,7 @@ export interface Product {
                         <SelectContent>
                           {categories.map((category) => (
                             <SelectItem key={category.id} value={category.id}>
-                              {category.name}
+                              {category.name} (ID: {category.id})
                             </SelectItem>
                           ))}
                         </SelectContent>
