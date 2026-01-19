@@ -91,7 +91,7 @@ export interface Product {
           description: newProduct.description,
           price: Number(newProduct.price), // Enviar como número
           stock: Number(newProduct.stock),
-          imageUrl: newProduct.imageUrl || null,
+          imageUrl: newProduct.imageUrl ? newProduct.imageUrl : undefined,
           category: newProduct.categoryId // Cambiado de categoryId a category
         }
         await createProduct(productData)
